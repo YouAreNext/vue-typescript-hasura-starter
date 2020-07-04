@@ -1,15 +1,21 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../pages/Home.vue";
+import Login from "../pages/Login.vue";
+import Index from "../pages/Index.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
+    name: "Index",
+    component: Index
+  },
+  {
+    path: "/login",
+    name: "Login",
     meta: { layout: "auth" },
-    component: Home
+    component: Login
   },
   {
     path: "/about",
